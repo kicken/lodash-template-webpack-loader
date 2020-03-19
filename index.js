@@ -19,7 +19,7 @@ function resolveFlags() {
 }
 
 function resolveModule(modulePath) {
-    return require.resolve(modulePath);
+    return require.resolve(modulePath).replace(/\\/g, '\\\\');
 }
 
 function templateSettingsToRegex(obj, keys) {
